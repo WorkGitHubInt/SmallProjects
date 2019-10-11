@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfApp2.Window3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="Пароль" Height="148.295" Width="337.216" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <StackPanel>
+        <Label Content="Введите пароль" HorizontalAlignment="Center" Margin="10"/>
+        <PasswordBox x:Name="Password" HorizontalAlignment="Center" Width="150" HorizontalContentAlignment="Center">
+            <PasswordBox.Resources>
+                <Storyboard x:Key="TestStoryboard">
+                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="RenderTransform.(TranslateTransform.Y)" RepeatBehavior="5x">
+                        <EasingDoubleKeyFrame KeyTime="0:0:0.05" Value="0"/>
+                        <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="2"/>
+                        <EasingDoubleKeyFrame KeyTime="0:0:0.15" Value="0"/>
+                        <EasingDoubleKeyFrame KeyTime="0:0:0.20" Value="-2"/>
+                        <EasingDoubleKeyFrame KeyTime="0:0:0.25" Value="0"/>
+                    </DoubleAnimationUsingKeyFrames>
+                </Storyboard>
+            </PasswordBox.Resources>
+            <PasswordBox.RenderTransform>
+                <TranslateTransform X="0" Y="0" />
+            </PasswordBox.RenderTransform>
+        </PasswordBox>
+        <Button HorizontalAlignment="Center" Width="100" Height="30" Margin="10" Content="Ввод" Click="Button_Click"/>
+    </StackPanel>
+</Window>

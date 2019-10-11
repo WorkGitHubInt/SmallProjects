@@ -1,0 +1,40 @@
+﻿<Page x:Class="WpfApp2.Page2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp2"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page2" Background="White">
+
+    <Grid>
+        <StackPanel x:Name="ChooseMenu">
+            <TextBlock FontWeight="SemiBold" FontSize="18">Section choice</TextBlock>
+            <TextBlock FontSize="14" Foreground="Blue" TextDecorations="Underline" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp">General information</TextBlock>
+            <TextBlock FontSize="14" Foreground="Blue" TextDecorations="Underline" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp_1">Button list</TextBlock>
+            <TextBlock FontSize="14" Foreground="Blue" TextDecorations="Underline" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp_2">Language selection</TextBlock>
+        </StackPanel>
+        <StackPanel x:Name="Information" Visibility="Hidden">
+            <TextBlock FontWeight="SemiBold" FontSize="18">General information</TextBlock>
+            <TextBlock TextWrapping="Wrap" FontSize="14">
+The program &#34;Rectangle&#34; is used to build rectangles with width in range from 1 to 480 and with height from 1 to 380. Width and height  Width and height are set in the respective fields &#34;Width&#34; and &#34;Height&#34;. After final data input press <TextBlock TextDecorations="Underline" Foreground="Blue" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp_6">Enter</TextBlock>.  A rectangle with the specified sides will be built in the window above. To clear input fields press button <TextBlock TextDecorations="Underline" Foreground="Blue" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp_6">'o'</TextBlock>(english letter).
+</TextBlock>
+            <TextBlock FontSize="14" Foreground="Blue" TextDecorations="Underline" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp_3">Return to section choice</TextBlock>
+        </StackPanel>
+        <StackPanel x:Name="ButtonList" Visibility="Hidden">
+            <TextBlock FontWeight="SemiBold" FontSize="18">Button list</TextBlock>
+            <TextBlock FontSize="14">Enter – accept input;</TextBlock>
+            <TextBlock FontSize="14">‘o’ – clear input fields;</TextBlock>
+            <TextBlock FontSize="14" Foreground="Blue" TextDecorations="Underline" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp_4">Return to section choice</TextBlock>
+        </StackPanel>
+        <StackPanel x:Name="Language" Visibility="Hidden">
+            <TextBlock FontWeight="SemiBold" FontSize="18">Language selection</TextBlock>
+            <TextBlock Text="The choice of interface language and help is carried out from two possible options:&#x0a;
+•	Russian;&#x0a;
+•	English;">
+            </TextBlock>
+            <TextBlock FontSize="14" Foreground="Blue" TextDecorations="Underline" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp_5">Return to section choice</TextBlock>
+        </StackPanel>
+    </Grid>
+</Page>

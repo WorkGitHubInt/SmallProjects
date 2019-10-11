@@ -1,0 +1,39 @@
+﻿<Page x:Class="WpfApp2.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp2"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page1" Background="White">
+    <Grid>
+        <StackPanel x:Name="ChooseMenu">
+            <TextBlock FontWeight="SemiBold" FontSize="18">Выбор раздела</TextBlock>
+            <TextBlock FontSize="14" Foreground="Blue" TextDecorations="Underline" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp">Общая информация</TextBlock>
+            <TextBlock FontSize="14" Foreground="Blue" TextDecorations="Underline" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp_1">Список клавиш</TextBlock>
+            <TextBlock FontSize="14" Foreground="Blue" TextDecorations="Underline" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp_2">Выбор языка</TextBlock>
+        </StackPanel>
+        <StackPanel x:Name="Information" Visibility="Hidden">
+            <TextBlock FontWeight="SemiBold" FontSize="18">Общая информация</TextBlock>
+            <TextBlock TextWrapping="Wrap" FontSize="14">
+Программа &#34;Прямоугольник&#34; служит для построения прямоугольника с шириной в диапазоне от 1 до 480 и высотой от 1 до 380. Ширина и высота задаются в соответствующих полях ввода &#34;Ширина:&#34; и &#34;Высота:&#34;. После окончательного ввода данных установите курсор в поле ввода &#34;Высота:&#34; и нажмите клавишу <TextBlock TextDecorations="Underline" Foreground="Blue" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp_6">Enter</TextBlock>. В окне выше будет построен прямоугольник с указанными сторонами. Для очищения полей ввода, установите курсор в поле ввода &#34;Высота:&#34; и нажмите клавишу <TextBlock TextDecorations="Underline" Foreground="Blue" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp_6">'o'</TextBlock>(английскую).
+</TextBlock>
+            <TextBlock FontSize="14" Foreground="Blue" TextDecorations="Underline" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp_3">Вернуться к выбору раздела</TextBlock>
+        </StackPanel>
+        <StackPanel x:Name="ButtonList" Visibility="Hidden">
+            <TextBlock FontWeight="SemiBold" FontSize="18">Список клавиш</TextBlock>
+            <TextBlock FontSize="14">Enter – подтверждение построения;</TextBlock>
+            <TextBlock FontSize="14">‘o’ – очистка полей ввода;</TextBlock>
+            <TextBlock FontSize="14" Foreground="Blue" TextDecorations="Underline" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp_4">Вернуться к выбору раздела</TextBlock>
+        </StackPanel>
+        <StackPanel x:Name="Language" Visibility="Hidden">
+            <TextBlock FontWeight="SemiBold" FontSize="18">Выбор языка</TextBlock>
+            <TextBlock Text="Выбор языка интерфейса и справки осуществляется из двух возможных вариантов (см.рисунок):&#x0a;
+•	Русский;&#x0a;
+•	Английский;">
+            </TextBlock>
+            <TextBlock FontSize="14" Foreground="Blue" TextDecorations="Underline" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp_5">Вернуться к выбору раздела</TextBlock>
+        </StackPanel>
+    </Grid>
+</Page>

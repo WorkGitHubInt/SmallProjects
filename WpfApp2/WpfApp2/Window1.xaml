@@ -1,0 +1,12 @@
+﻿<Window x:Class="WpfApp2.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="Справка" Height="450" Width="766.762" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Activated="Window_Activated">
+    <Grid>
+        <Frame x:Name="MainFrame" Source="Page1.xaml" HorizontalAlignment="Left" Height="409" VerticalAlignment="Top" Width="739" Margin="10,0,0,0"/>
+    </Grid>
+</Window>
