@@ -1,0 +1,49 @@
+﻿<Window x:Class="AirportSystem.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Вход" Height="300" Width="300" 
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="249*"/>
+        </Grid.RowDefinitions>
+        <Menu>
+            <MenuItem Click="MenuItem_Click" Header="Справка"/>
+            <MenuItem Click="MenuItem_Click_1" Header="Об авторе"/>
+        </Menu>
+        <Grid Name="Choise" Margin="30,0,30,30" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button Click="User_Click" Margin="20" Content="Пассажир"/>
+            <Button Click="Admin_Click" Margin="20" Grid.Row="1" Content="Администратор"/>
+        </Grid>
+        <Grid Name="LoginForm" Margin="30,30,30,30"  Grid.Row="1" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="33*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="101*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Пароль"/>
+            <PasswordBox FontSize="18" Grid.ColumnSpan="2" HorizontalContentAlignment="Center" Grid.Row="1" x:Name="PasswordText"/>
+            <Button Margin="10,40" Grid.Row="2" Grid.Column="1" IsDefault="True" Click="LoginBtn_Click" Content="Войти"/>
+            <Button Margin="10,40" Grid.Row="2" Click="Button_Click" Content="Назад"/>
+        </Grid>
+    </Grid>
+</Window>
